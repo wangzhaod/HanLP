@@ -33,7 +33,7 @@ Insert the following dependency into your `pom.xml`.
 <dependency>
   <groupId>com.hankcs.hanlp.restful</groupId>
   <artifactId>hanlp-restful</artifactId>
-  <version>0.0.7</version>
+  <version>0.0.6</version>
 </dependency>
 ```
 
@@ -103,26 +103,24 @@ The result is guaranteed to be `96.70` as the random feed is fixed. Different fr
 
 ## Performance
 
-<table><thead><tr><th rowspan="2">lang</th><th rowspan="2">corpora</th><th rowspan="2">model</th><th colspan="2">tok</th><th colspan="4">pos</th><th colspan="3">ner</th><th rowspan="2">dep</th><th rowspan="2">con</th><th rowspan="2">srl</th><th colspan="4">sdp</th><th rowspan="2">lem</th><th rowspan="2">fea</th><th rowspan="2">amr</th></tr><tr><th>fine</th><th>coarse</th><th>ctb</th><th>pku</th><th>863</th><th>ud</th><th>pku</th><th>msra</th><th>ontonotes</th><th>SemEval16</th><th>DM</th><th>PAS</th><th>PSD</th></tr></thead><tbody><tr><td rowspan="2">mul</td><td rowspan="2">UD2.7<br>OntoNotes5</td><td>small</td><td>98.62</td><td>-</td><td>-</td><td>-</td><td>-</td><td>93.23</td><td>-</td><td>-</td><td>74.42</td><td>79.10</td><td>76.85</td><td>70.63</td><td>-</td><td>91.19</td><td>93.67</td><td>85.34</td><td>87.71</td><td>84.51</td><td>-</td></tr><tr><td>base</td><td>98.97</td><td>-</td><td>-</td><td>-</td><td>-</td><td>90.32</td><td>-</td><td>-</td><td>80.32</td><td>78.74</td><td>71.23</td><td>73.63</td><td>-</td><td>92.60</td><td>96.04</td><td>81.19</td><td>85.08</td><td>82.13</td><td>-</td></tr><tr><td rowspan="5">zh</td><td rowspan="2">open</td><td>small</td><td>97.25</td><td>-</td><td>96.66</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>95.00</td><td>84.57</td><td>87.62</td><td>73.40</td><td>84.57</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>base</td><td>97.50</td><td>-</td><td>97.07</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>96.04</td><td>87.11</td><td>89.84</td><td>77.78</td><td>87.11</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td rowspan="3">close</td><td>small</td><td>96.70</td><td>95.93</td><td>96.87</td><td>97.56</td><td>95.05</td><td>-</td><td>96.22</td><td>95.74</td><td>76.79</td><td>84.44</td><td>88.13</td><td>75.81</td><td>74.28</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>base</td><td>97.52</td><td>96.44</td><td>96.99</td><td>97.59</td><td>95.29</td><td>-</td><td>96.48</td><td>95.72</td><td>77.77</td><td>85.29</td><td>88.57</td><td>76.52</td><td>73.76</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>ernie</td><td>96.95</td><td>97.29</td><td>96.76</td><td>97.64</td><td>95.22</td><td>-</td><td>97.31</td><td>96.47</td><td>77.95</td><td>85.67</td><td>89.17</td><td>78.51</td><td>74.10</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr></tbody></table>
+<table><thead><tr><th rowspan="2">lang</th><th rowspan="2">corpora</th><th rowspan="2">model</th><th colspan="2">tok</th><th colspan="4">pos</th><th colspan="3">ner</th><th rowspan="2">dep</th><th rowspan="2">con</th><th rowspan="2">srl</th><th colspan="4">sdp</th><th rowspan="2">lem</th><th rowspan="2">fea</th><th rowspan="2">amr</th></tr><tr><th>fine</th><th>coarse</th><th>ctb</th><th>pku</th><th>863</th><th>ud</th><th>pku</th><th>msra</th><th>ontonotes</th><th>SemEval16</th><th>DM</th><th>PAS</th><th>PSD</th></tr></thead><tbody><tr><td rowspan="2">mul</td><td rowspan="2">UD2.7<br>OntoNotes5</td><td>small</td><td>98.62</td><td>-</td><td>-</td><td>-</td><td>-</td><td>93.23</td><td>-</td><td>-</td><td>74.42</td><td>79.10</td><td>76.85</td><td>70.63</td><td>-</td><td>91.19</td><td>93.67</td><td>85.34</td><td>87.71</td><td>84.51</td><td>-</td></tr><tr><td>base</td><td></td><td>-</td><td>-</td><td>-</td><td>-</td><td></td><td>-</td><td>-</td><td></td><td></td><td></td><td></td><td>-</td><td></td><td></td><td></td><td></td><td></td><td>-</td></tr><tr><td rowspan="4">zh</td><td rowspan="2">open</td><td>small</td><td>97.25</td><td>-</td><td>96.66</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>95.00</td><td>84.57</td><td>87.62</td><td>73.40</td><td>84.57</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>base</td><td>97.50</td><td>-</td><td>97.07</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>96.04</td><td>87.11</td><td>89.84</td><td>77.78</td><td>87.11</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td rowspan="3">close</td><td>small</td><td>96.70</td><td>95.93</td><td>96.87</td><td>97.56</td><td>95.05</td><td>-</td><td>96.22</td><td>95.74</td><td>76.79</td><td>84.44</td><td>88.13</td><td>75.81</td><td>74.28</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>base</td><td>97.52</td><td>96.44</td><td>96.99</td><td>97.59</td><td>95.29</td><td>-</td><td>96.48</td><td>95.72</td><td>77.77</td><td>85.29</td><td>88.57</td><td>76.52</td><td>73.76</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td></td><td>ernie</td><td>96.95</td><td>97.29</td><td>96.76</td><td>97.64</td><td>95.22</td><td>-</td><td>97.31</td><td>96.47</td><td>77.95</td><td>85.67</td><td>89.17</td><td>78.51</td><td>74.10</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr></tbody></table>
 
-- AMR models will be released soon.
+- AMR models will be released once our paper gets accepted.
 
 ## Citing
 
 If you use HanLP in your research, please cite this repository. 
 
 ```latex
-@inproceedings{he-choi-2021-stem,
-    title = "The Stem Cell Hypothesis: Dilemma behind Multi-Task Learning with Transformer Encoders",
-    author = "He, Han and Choi, Jinho D.",
-    booktitle = "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing",
-    month = nov,
-    year = "2021",
-    address = "Online and Punta Cana, Dominican Republic",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2021.emnlp-main.451",
-    pages = "5555--5577",
-    abstract = "Multi-task learning with transformer encoders (MTL) has emerged as a powerful technique to improve performance on closely-related tasks for both accuracy and efficiency while a question still remains whether or not it would perform as well on tasks that are distinct in nature. We first present MTL results on five NLP tasks, POS, NER, DEP, CON, and SRL, and depict its deficiency over single-task learning. We then conduct an extensive pruning analysis to show that a certain set of attention heads get claimed by most tasks during MTL, who interfere with one another to fine-tune those heads for their own objectives. Based on this finding, we propose the Stem Cell Hypothesis to reveal the existence of attention heads naturally talented for many tasks that cannot be jointly trained to create adequate embeddings for all of those tasks. Finally, we design novel parameter-free probes to justify our hypothesis and demonstrate how attention heads are transformed across the five tasks during MTL through label analysis.",
+@inproceedings{he-choi-2019,
+  title = {Establishing Strong Baselines for the New Decade: Sequence Tagging, Syntactic and Semantic Parsing with BERT},
+  author = {Han He and Jinho Choi},
+  booktitle = {The Thirty-Third International Flairs Conference},
+  conference = {Florida Artificial Intelligence Research Society Conference},
+  year = {2020},
+  keywords = {part-of-speech tagging, syntactic parsing, semantic parsing, Transformer, BERT},
+  abstract = {This paper presents new state-of-the-art models for three tasks, part-of-speech tagging, syntactic parsing, and semantic parsing, using the cutting-edge contextualized embedding framework known as BERT. For each task, we first replicate and simplify the current state-of-the-art approach to enhance its model efficiency. We then evaluate our simplified approaches on those three tasks using token embeddings generated by BERT. 12 datasets in both English and Chinese are used for our experiments. The BERT models outperform the previously best-performing models by 2.5\% on average (7.5\% for the most significant case). All models and source codes are available in public so that researchers can improve upon and utilize them to establish strong baselines for the next decade.},
+  url = {https://www.aaai.org/ocs/index.php/FLAIRS/FLAIRS20/paper/view/18438}
 }
 ```
 
